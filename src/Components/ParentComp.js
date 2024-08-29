@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PC from './PureComp';
+import PureComp from './PureComp';
 import RegComp from './RegComp';
 export class ParentComp extends Component {
   constructor(props) {
@@ -16,13 +16,15 @@ export class ParentComp extends Component {
     }, 3000);
   }
 
+  onAdd = () => {};
+
   render() {
     console.log('Regular component render');
     return (
       <div>
         I'm t he parent component
-        <RegComp name={this.state.name} />
-        <PC />
+        <RegComp name={this.state.name} onAdd={this.onAdd} />
+        <PureComp />
       </div>
     );
   }
