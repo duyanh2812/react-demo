@@ -1,26 +1,28 @@
-import React, { Component } from 'react'
-import UpdatedComp from './HigherOrder'
+import React, { Component } from 'react';
+import UpdatedComp from './HigherOrder';
 
 export class Click extends Component {
   constructor(props) {
-    super(props)
-  
+    super(props);
+
     this.state = {
-       count: 0
-    }
+      count: 0,
+    };
   }
 
   UpdateClick = () => {
-    this.setState({count: this.state.count + 1})
-  }
+    this.setState({ count: this.state.count + 1 });
+  };
   render() {
-    const{count} = this.state;
+    const { count } = this.state;
     return (
       <div>
-        <button onClick={this.UpdateClick}>{this.props.name} Click {count} time</button>
+        <button onClick={this.UpdateClick}>
+          {this.props.name} Click {count} time
+        </button>
       </div>
-    )
+    );
   }
 }
 
-export default UpdatedComp(Click)
+export default UpdatedComp(Click);

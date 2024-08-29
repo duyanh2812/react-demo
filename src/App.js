@@ -1,20 +1,19 @@
-//import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
-import {ClassComponent, ClassComponent2} from './Components/ClassComponent'
-import FC from './Components/FunctionalComp'
-import Click from './Components/Click';
-import Counter from './Components/Counter';
-
-function App() {
-  return (
-    <div>
-      <FC />
-      <ClassComponent />
-      <ClassComponent2 />
-      <Click />
-      <Counter/>
-    </div>
-  );
+import NewComp from './Components/state/NewComp';
+export class App extends Component {
+  styles = {
+    fontStyle: 'Bold',
+    color: 'teal',
+  };
+  render() {
+    return (
+      <div className="App">
+        <h1 style={this.styles}> Welcome</h1>
+        <NewComp />
+      </div>
+    );
+  }
 }
 
 export default App;

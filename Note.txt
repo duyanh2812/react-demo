@@ -1,0 +1,3 @@
+rconst => Create constructor
+rce => Create Class Component
+clg => Console log
